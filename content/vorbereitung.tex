@@ -1,2 +1,77 @@
 \subsection{Vorbereitung - Bestimmung der Fourierkoeffizienten}
 \label{sec:vorbereitung}
+Zur Vorbereitung auf das Experiment sind die Fourierkoeffizienten von drei Schwingungsformen, einer Reckteck-, einer Sägezahn-
+und einer Dreieck, zu bestimmen. Dabei ist es von Vorteil die Schwingungen als gerade oder ungerade Funktionen zu definieren, so 
+dass Koeffizienten wegfallen. Die Berechung dieser erfolgt jeweils über GLEICHUNGAK und GLEICHUNGBK, woraus sich dann nach Gleichung
+GLEICHUNGFOURIER jeweils die zugehörige Fourierreihe berechnet.
+    \subsection{Rechteckschwinung}
+    Die Rechteckschwingung wird als
+    \begin{equation}
+    \label{eqn:rechteck}
+    g(t) = \begin{cases}
+                1 & -\frac{T}{2} < t < 0 \\
+                0 & 0 < t < \frac{T}{2} 
+            \end{cases}
+    \end{equation}        
+    definiert. Die Fourierkoeffizienten dieser Funktion sind
+    \\
+    \centerline{$a_n = 0$} 
+    \\
+    und
+    \\ 
+    \centerline{$b_n = \begin{cases}
+                            0 & n \text{ gerade} \\
+                            \frac{4}{\pi n } & n \text{ ungerade}
+                        \end{cases}$.}
+                        \\
+    Die zugehörige Fourierreihe ist daher
+    \begin{equation}
+    \label{eqn:fourierrechteck}
+    f(t) = \sum_{n=1 \\ \\ \text{, $n$ ungerade}}^{\infty}  \frac{4}{\pi n } \sin(n \frac{2 \pi}{T} t),
+    \end{equation}
+    wobei $n$ nur ungerade Werte annimmt.
+
+    \subsection{Sägezahnschwingung}
+    Die Funktion, die die Sägezahnschwingung beschreibt lautet:
+    \begin{equation}
+    \label{eqn:saegezahn}
+    g(t) = \begin{cases}
+            \lvert t \rvert & -T \leq t < T \\
+            0 & t = T 
+            \end{cases}.
+    \end{equation}
+    Die Fourierkoeffizienten dieser Funktion sind
+    \\ 
+    \centerline{$a_n = \frac{2T}{\pi n} \cos(\pi n)$}
+    \\
+    und 
+    \\ 
+    \centerline{$b_n = 0$.}
+    Daher ist die zugehörige Fourierreihe
+    \begin{equation}
+    \label{eqn:fouriersäge} 
+    f(t) = \sum_{i=1}^{\infty} \frac{2 T}{\pi n} \cos(\frac{ 2 \pi n}{T}t).
+    \end{equation}
+
+    \subsection{Dreieckschwingung}
+    Die Funtktion zur Beschreibung der Dreieckschwingung ist definiert als
+    \begin{equation}
+    \label{eqn:dreieck}
+    g(t) = \begin{cases} 
+            - \frac {2 A} {T} & - \frac {T}{2} < t < 0 \\
+            \frac {2 A} {T} & 0 < t < \frac {T}{2}
+            \end{cases},
+    \end{equation}
+    wobei $A$ die Amplitude der Schwingung ist.
+    Die Fourierkoeffizienten zu dieser Funktion sind
+    \\
+    \centerline{$a_n = \begin{cases}
+                        0 & n \text{ gerade} \\
+                        - \frac{8 A}{(\pi n)^2} \end{cases}$}
+                        \\
+    und   
+    \\         
+    \centerline{$b_n = 0$.} 
+    \\               
+
+
