@@ -1,4 +1,50 @@
+\section{Zielsetzung}
+
+In diesem Versuch werden verschiedene periodische Funktionen in ihre Fourierkoeffizienten zerlegt. Diese werden genutzt, um eine Fouriersynthese durchzuführen.
+
 \section{Theorie}
 \label{sec:Theorie}
 
-\cite{sample}
+Für eine periodische Funktion $f(t):[0, T] \rightarrow \mathds{R}$ gilt
+
+\begin{center}
+    $f(t) = f(t + T)$.
+\end{center}
+
+Für eine solche Funktion besagt das Fouriertheorem, dass sie in Terme von Sinus und Kosinus zerlegt werden kann.
+Dabei ist die Fourierreihe mit
+
+\begin{equation}
+\label{eqn:fourierreihe}
+    \frac{a_0}{2} + \sum_{k=1}^\infty \bigg( a_k \cdot \cos \bigg( \frac{2 n \pi}{T} t \bigg) + b_k \sin \bigg( \frac{2 n \pi}{T} t \bigg) \bigg).
+\end{equation}
+
+definiert. Diese Reihe ist gleichmäßig konvergent, wenn $f(t)$ eine periodische Funktion mit der Periodendauer $T$ ist. Dann gilt für die Koeffizienten
+
+\begin{equation}
+\label{eqn:ak}
+    a_k = \frac{2}{T} \int_0^T f(t) \cos \bigg( \frac{2 n \pi}{T} t \bigg) \symup{d}t
+\end{equation}
+
+und
+
+\begin{equation}
+\label{eqn:bk}
+    a_k = \frac{2}{T} \int_0^T f(t) \sin \bigg( \frac{2 n \pi}{T} t \bigg) \symup{d}t
+\end{equation}
+
+mit $k \in \mathds{N}$.
+
+Aus der Definition der Fourierreihe lassen sich ganzzahlige Vielfache einer Grundfrequenz $\nu_1$ erkennen. Diese sind die Frequenzen zu den jeweiligen Oberschwingungen.
+Des Weiteren gibt es in \eqref{eqn:fourierreihe} nur Phasenverschiebungen von $0$, $\frac{\pi}{2}$, $\pi$ und $\frac{3 \pi}{2}$.
+Werden die Amplituden $a_k$ beziehungsweise $b_k$ von einer periodischen Funktion gegen die zugehörigen Frequenzen aufgetragen ergibt sich ein Linienspektrum, während eine nicht periodische Funktion ein kontinuierliches Spektrum liefert.
+Eine Fourieranalyse lässt sich auch mit nicht stetigen periodischen Funktionen durchführen. Dabei entsteht im Graphen der Fourierreihe an den Unstetigkeitsstellen eine Überschwingungung. Diese wird als Gibb'sches Phänomen bezeichnet. Die Größe bleibt selbst bei $n \rightarrow \infty$ konstant, jedoch wird die Breite des Überschwingens geringer.
+
+Die Fouriertransformation liefert dabei das Linienspektrum. Es gilt dabei
+
+\begin{equation}
+\label{eqn:fouriertrafo}
+    g(\nu) = \int_{-\infty}^{infty} f(t) e^{i\nu t} \symup{d}t.
+\end{equation}
+
+In der Praxis kann allerdings nicht über einen unendlichen Zeitraum integriert werden, weshalb diese Funktionen nicht periodisch sind. Dadurch entstehen kleine Nebenmaxima und es entstehen keine $\delta$-Peaks, sondern endlich breite Linien an den entsprechenden Stellen.
