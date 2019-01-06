@@ -8,8 +8,91 @@
 %  \label{fig:plot}
 %\end{figure}
 \subsection{Fourier-Analyse}
-
-
+Die gemessenen Amplituden werden auf die Amplitude der ersten Oberwelle normiert. Gemessene Amplituden, sowie die Normierung 
+dieser ist in \autoref{tab:amplituden} für alle drei Schwingungsformen zu sehen.
+\input{../content/amplituden.tex}
+Die Normierungen werden doppellogarithmisch gegen die Nummer der Oberwellen aufgetragen, worüber anschließend eine lineare
+Ausgleichsrechnung durchgeführt wird. Dies ist nötig um die Genauigkeit der Messung hinsichtlich des Abfalls der Oberwellenamplituden
+zu überprüfen, da diese mit dem Faktor $\frac{1}{n}$ beziehungsweise $\frac{1}{n^2}$ bei der Dreieckschwinung abnehmen sollen.
+Durch eine doppellogarithmische Auftragung und anschließender Bestimmung der Steigung der Ausgleichsgeraden kann diese mit dem 
+theoretischen Faktor von $-1$ bei der Rechteck - und Sägezahnschwingung und $-2$ bei der Dreieckschwinung verglichen werden. 
+Die Steigung der erechneten Geraden soll bestimmt werden. Bei allen Schwingungsformen wird eine Ausgleichsrechnung der Form 
+\begin{equation}
+y = a \cdot x + b.
+\end{equation} 
+durchgeführt, wobei $y$ die Normierung der Amplituden  $\frac{U_n}{U_1}$ ist und  $x$ die Nummer der Oberwellen $n$.
+Die Steigung $a$ der Ausgleichsgerade errechnet sich über 
+\begin{equation}
+\label{eqn:a}
+a = \frac {\sum_{i=1}^N (x_i - \overline{x}) (y_i - \overline{y})}{\sum_{i=1}^N (x_i - \overline{x})^2},
+\end{equation}
+wobei $N$ die Gesamtanzahl der verwendeten Oberwellen ist.
+Die aufgetragenen Werte sowie die Ausgleichsgerade zur Rechteckschwingung ist in \autoref{fig:graph_rechteck} zu sehen.
+Die Steigung der linearen Ausgleichsgerade zur Rechteckschwingung beträgt nach Gleichung \eqref{eqn:a}
+\\ \\
+\centerline{$a = ( -1.251 \pm 0.036 ) $.}
+\\ \\
+\begin{figure}
+  \centering
+  \includegraphics{build/rechteck.pdf}
+  \caption{Normierungen der Amplituden der Rechteckschwingung doppellogarithmisch gegen die Nummer der Oberwellen aufgetragen und Ausgleichsgerade.}
+  \label{fig:graph_rechteck}
+\end{figure}
+Bei der Sägezahnschwingung sind die entsprechenden Werte aus \autoref{tab:amplituden}, sowie die zugehörige Ausgleichsgerade
+in \autoref{fig:graph_saegezahn} zu sehen. 
+Die Steigung der Ausgleichsgerade beträgt mit Gleichung \eqref{eqn:a}
+\\ \\ 
+\centerline{$ a = (- 0.966 \pm 0.021)$.}
+\\ \\
+\begin{figure}
+  \centering
+  \includegraphics{build/saegezahn.pdf}
+  \caption{Normierungen der Amplituden der Sägezahnschwinung doppellogarithmisch gegen die Nummer der Oberwellen aufgetragen und Ausgleichsgerade.}
+  \label{fig:graph_saegezahn}
+\end{figure}
+Statt einer Anzahl von $N = 10$ Oberwellen, liegen hier lediglich $N = 6$ Oberwellen vor (siehe \autoref{sec:Diskussion}).
+Die Werte werden entsprechend wieder aus \autoref{tab:amplituden} entnommen und doppellogarithmisch gegen die Anzahl der 
+Oberwellen aufgetragen, worüber wieder eine Ausgleichsgerade gebildet wird. Dies ist in \autoref{fig:graph_dreieck} zu sehen.
+Die Steigung der Ausgleichsgerade beträgt 
+\\ \\
+\centerline{$a = ( -2.709 \pm 0.144 )$.}
+\\ \\
+\begin{figure}
+  \centering
+  \includegraphics{build/dreieck.pdf}
+  \caption{Normierungen der Amplituden der Dreieckschwinung doppellogarithmisch gegen die Nummer der Oberwellen aufgetragen und Ausgleichsgerade.}
+  \label{fig:graph_dreieck}
+\end{figure}
+\newpage
 \subsection{Fourier-Synthese}
 Die zur Fouriersynthese verwendeten Amplituden sind in \autoref{tab:eingestellt} zu sehen. 
 \input{../content/eingestellt.tex}
+Bei der Synthese der Rechteckschwingung werden die entsprechenden Werte aus \autoref{tab:eingestellt} entnommen, wobei in die 
+Rechteckschwingung nur Oberwellen mit ungerader Nummer einwirken; Oberwellen mit gerader Nummer sind bei der Rechteckschwingung
+zu vernachlässigen. Die synthetisierte Funktion ist in \autoref{fig:synth_rechteck} dargstellt.
+\begin{figure}
+  \centering
+  \includegraphics{content/MAP002.png}
+  \caption{Synthetisierte Rechteckschwingung.}
+  \label{fig:synth_rechteck}
+\end{figure}
+
+Bei der Synthese der Sägezahnschwingung werden dieselben Koeffizienten wie bei der Synthese der Rechteckschwingung verwendet, da
+die Koeffizienten beider Schwingungsformen mit dem selben Faktor $\frac{1}{n}$ abfallen. Hier wirken allerdings alle 
+entsprechende Werte aus \autoref{tab:eingestellt} ein. Die synthetisierte Sägezahnfunktion 
+ist in \autoref{fig:synth_saegezahn} zu sehen.
+\begin{figure}
+  \centering
+  \includegraphics{content/MAP001.png}
+  \caption{Synthetisierte Sägezahnschwingung.}
+  \label{fig:synth_saegezahn}
+\end{figure}
+
+Zur Synthese der Dreieckschwingung werden die entsprechenden Amplituden aus \autoref{tab:eingestellt} verwendet.
+Die so synthetisierte Dreieckschwingung ist in \autoref{fig:synth_dreieck} zu sehen.
+\begin{figure}
+  \centering
+  \includegraphics{content/MAP003.png}
+  \caption{Synthetisierte Dreieckschwingung.}
+  \label{fig:synth_dreieck}
+\end{figure}

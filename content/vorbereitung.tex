@@ -27,7 +27,7 @@ GLEICHUNGFOURIER jeweils die zugehörige Fourierreihe berechnet.
     Die zugehörige Fourierreihe ist daher
     \begin{equation}
     \label{eqn:fourierrechteck}
-    f(t) = \sum_{n=1 \\ \\ \text{, $n$ ungerade}}^{\infty}  \frac{4}{\pi n } \sin(n \frac{2 \pi}{T} t),
+    f(t) = \sum_{n=1}^{\infty}  \frac{4}{\pi n } \sin(n \frac{2 \pi}{T} t),
     \end{equation}
     wobei $n$ nur ungerade Werte annimmt.
 
@@ -67,11 +67,17 @@ GLEICHUNGFOURIER jeweils die zugehörige Fourierreihe berechnet.
     \\
     \centerline{$a_n = \begin{cases}
                         0 & n \text{ gerade} \\
-                        - \frac{8 A}{(\pi n)^2} \end{cases}$}
+                        - \frac{8 A}{(\pi n)^2} & n \text{ungerade} \end{cases}$}
                         \\
     und   
     \\         
     \centerline{$b_n = 0$.} 
-    \\               
-
+    \\      
+    Die dazugehörige Fourierreihe ist daher
+    \begin{equation}
+    \label{eqn:fourierdrei}
+    f(t) = \sum_{i=1}^{\infty} - \frac{8 A}{(\pi n)^2} \cos(\frac{2 \pi n}{T}t),    
+    \end{equation}
+    wobei $n$ nur ungerade Werte annimmt.
+ 
 

@@ -58,4 +58,4 @@ def csv2textable(pathToFile, caption, label, format, delimiter=";"):
         f.write("\\bottomrule\n")
         f.write(fileEnd)
 
-csv2textable("csv/amplituden_einrecht.csv", "Eingestellte Amplituden zur Fouriersynthese", "eingestellt", "c c")
+csv2textable("csv/rechteck.csv", "Amplituden, sowie deren Normierung auf die erste Oberwelle", "amplituden", "c c")

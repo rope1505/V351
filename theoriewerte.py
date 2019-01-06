@@ -17,9 +17,9 @@ def csv_read(pathToFile, delimiter=";"):
 rwerte = csv_read("csv/amplituden_einrecht.csv")
 swerte = csv_read("csv/amplituden_einrecht.csv")
 dwerte = csv_read("csv/amplituden_eindrei.csv")
-data0 = np.zeros(10)
-data1 = np.zeros(10)
-data2 = np.zeros(4)
+datar = np.zeros(5)
+datas = np.zeros(10)
+datad = np.zeros(4)
 ignore = True
 i=0
 
@@ -27,8 +27,9 @@ for values in rwerte:
     if(ignore):
         ignore = False
     else:
-        data0[i] = float(values[1])
+        datar[i] = float(values[1])
         i = i+1
+        ignore = True
 
 ignore = True
 i=0      
@@ -36,7 +37,7 @@ for values in swerte:
     if(ignore):
         ignore = False
     else:
-        data1[i] = float(values[1])
+        datas[i] = float(values[1])
         i = i+1
 
 ignore = True
@@ -45,10 +46,10 @@ for values in dwerte:
     if(ignore):
         ignore = False
     else:
-        data2[i] = float(values[1])
+        datad[i] = float(values[1])
         i = i+1
                         
 
 
-print(data0, data1, data2)                        
+print(datar, datas, datad)                        
 
