@@ -49,6 +49,12 @@ for values in dwerte:
         datad[i] = float(values[1])
         i = i+1
                         
+theorier = np.zeros(5)
+theories = np.zeros(10)
+theoried = np.zeros(4)      
+i = 0
+for  i < 5
+    theorier [i] = theorier[i-1] + (4/(np.pi * i)) * np.sin(i * )
 
 
 print(datar, datas, datad)                        
