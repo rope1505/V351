@@ -13,10 +13,11 @@ dieser ist in \autoref{tab:amplituden} für alle drei Schwingungsformen zu sehen
 \input{../content/amplituden.tex}
 Die Normierungen werden doppellogarithmisch gegen die Nummer der Oberwellen aufgetragen, worüber anschließend eine lineare
 Ausgleichsrechnung durchgeführt wird. Dies ist nötig um die Genauigkeit der Messung hinsichtlich des Abfalls der Oberwellenamplituden
-zu überprüfen, da diese mit dem Faktor $\frac{1}{n}$ beziehungsweise $\frac{1}{n^2}$ bei der Dreieckschwinung abnehmen sollen.
+zu überprüfen, da diese mit dem Faktor $\frac{1}{n}$ beziehungsweise $\frac{1}{n^2}$ bei der Dreieckschwinung abnehmen sollen, wie 
+bereits in \autoref{sec:vorbereitung} ermittelt wurde.
 Durch eine doppellogarithmische Auftragung und anschließender Bestimmung der Steigung der Ausgleichsgeraden kann diese mit dem 
 theoretischen Faktor von $-1$ bei der Rechteck - und Sägezahnschwingung und $-2$ bei der Dreieckschwinung verglichen werden. 
-Die Steigung der erechneten Geraden soll bestimmt werden. Bei allen Schwingungsformen wird eine Ausgleichsrechnung der Form 
+Bei allen Schwingungsformen wird eine Ausgleichsrechnung der Form 
 \begin{equation}
 y = a \cdot x + b.
 \end{equation} 
@@ -24,21 +25,42 @@ durchgeführt, wobei $y$ die Normierung der Amplituden  $\frac{U_n}{U_1}$ ist un
 Die Steigung $a$ der Ausgleichsgerade errechnet sich über 
 \begin{equation}
 \label{eqn:a}
-a = \frac {\sum_{i=1}^N (x_i - \overline{x}) (y_i - \overline{y})}{\sum_{i=1}^N (x_i - \overline{x})^2},
+a = \frac {\sum_{i=1}^N (x_i - \overline{x}) (y_i - \overline{y})}{\sum_{i=1}^N (x_i - \overline{x})^2}
 \end{equation}
-wobei $N$ die Gesamtanzahl der verwendeten Oberwellen ist.
-Die aufgetragenen Werte sowie die Ausgleichsgerade zur Rechteckschwingung ist in \autoref{fig:graph_rechteck} zu sehen.
+und die Konstante $b$ über
+\begin{equation}
+\label{eqt:b}
+b = \overline{y} - a \cdot \overline{x},
+\end{equation}
+wobei $N$ jeweils die Gesamtanzahl der verwendeten Oberwellen ist.
+Die Mittelwerte $\overline{x}$ sind mit 
+\begin{equation}
+\label{eqt:mittelwert}
+\overline{x} = \frac {1} {N} \sum_{i=1}^N x_i
+\end{equation}
+zu berechnen und haben den Fehler
+\begin{equation}
+\label{eqt:FehlerMittelwert}
+\Delta \overline{x} = \frac{1}{\sqrt{N \cdot (N-1)}} \sqrt{ \sum_{i=1}^N (x_i - \overline{x})^2}.
+\end{equation}
+
+Die aufgetragenen Werte aus \autoref{tab:amplituden}, 
+sowie die Ausgleichsgerade zur Rechteckschwingung sind in \autoref{fig:graph_rechteck} zu sehen.
+Bei der Reckteckschwingung, sowie bei der Sägezahnschwingung werden jeweils $N = 10$ Amplitudenverhältnisse eingebracht.
+Bei der Rechteckschwingung ist außerdem zu Beachten, dass, wie in \autoref{sec:vorbereitung} festgestellt, nur die 
+ungeraden Koeffizienten einwirken, sodass hier die ersten zehn Amplitudenverhältnisse ungerader Oberwellennummer aufgetragen
+werden.
 Die Steigung der linearen Ausgleichsgerade zur Rechteckschwingung beträgt nach Gleichung \eqref{eqn:a}
 \\ \\
-\centerline{$a = ( -1.251 \pm 0.036 ) $.}
+\centerline{$a = ( -1.002 \pm 0.021 ) $.}
 \\ \\
 \begin{figure}
   \centering
   \includegraphics{build/rechteck.pdf}
-  \caption{Normierungen der Amplituden der Rechteckschwingung doppellogarithmisch gegen die Nummer der Oberwellen aufgetragen und Ausgleichsgerade.}
+  \caption{Normierungen der Amplituden der Rechteckschwingung doppellogarithmisch gegen die Nummer der Oberwellen aufgetragen mit zugehöriger Ausgleichsgerade.}
   \label{fig:graph_rechteck}
 \end{figure}
-Bei der Sägezahnschwingung sind die entsprechenden Werte aus \autoref{tab:amplituden}, sowie die zugehörige Ausgleichsgerade
+Bei der Sägezahnschwingung sind die entsprechenden, aufgetragenen Werte aus \autoref{tab:amplituden}, sowie die zugehörige Ausgleichsgerade
 in \autoref{fig:graph_saegezahn} zu sehen. 
 Die Steigung der Ausgleichsgerade beträgt mit Gleichung \eqref{eqn:a}
 \\ \\ 
@@ -47,20 +69,21 @@ Die Steigung der Ausgleichsgerade beträgt mit Gleichung \eqref{eqn:a}
 \begin{figure}
   \centering
   \includegraphics{build/saegezahn.pdf}
-  \caption{Normierungen der Amplituden der Sägezahnschwinung doppellogarithmisch gegen die Nummer der Oberwellen aufgetragen und Ausgleichsgerade.}
+  \caption{Normierungen der Amplituden der Sägezahnschwinung doppellogarithmisch gegen die Nummer der Oberwellen aufgetragen mit zugehöriger Ausgleichsgerade.}
   \label{fig:graph_saegezahn}
 \end{figure}
-Statt einer Anzahl von $N = 10$ Oberwellen, liegen hier lediglich $N = 6$ Oberwellen vor (siehe \autoref{sec:Diskussion}).
+Statt einer Anzahl von $N = 10$ Oberwellen, liegen hier lediglich $N = 6$ Oberwellen vor (siehe \autoref{sec:Diskussion}),
+wobei auch hier wieder nur Oberwellen ungerader Nummer einwirken.
 Die Werte werden entsprechend wieder aus \autoref{tab:amplituden} entnommen und doppellogarithmisch gegen die Anzahl der 
 Oberwellen aufgetragen, worüber wieder eine Ausgleichsgerade gebildet wird. Dies ist in \autoref{fig:graph_dreieck} zu sehen.
 Die Steigung der Ausgleichsgerade beträgt 
 \\ \\
-\centerline{$a = ( -2.709 \pm 0.144 )$.}
+\centerline{$a = ( -2.041 \pm 0.037 )$.}
 \\ \\
 \begin{figure}
   \centering
   \includegraphics{build/dreieck.pdf}
-  \caption{Normierungen der Amplituden der Dreieckschwinung doppellogarithmisch gegen die Nummer der Oberwellen aufgetragen und Ausgleichsgerade.}
+  \caption{Normierungen der Amplituden der Dreieckschwinung doppellogarithmisch gegen die Nummer der Oberwellen aufgetragen mit zugehöriger Ausgleichsgerade.}
   \label{fig:graph_dreieck}
 \end{figure}
 \newpage
@@ -71,9 +94,9 @@ Bei der Synthese der Rechteckschwingung werden die entsprechenden Werte aus \aut
 Rechteckschwingung nur Oberwellen mit ungerader Nummer einwirken; Oberwellen mit gerader Nummer sind bei der Rechteckschwingung
 zu vernachlässigen. Die synthetisierte Funktion ist in \autoref{fig:synth_rechteck} dargstellt. Diese lässt sich gut als 
 Darstellung einer Rechteckfunktion identifizieren, wobei an den Extrema der Rechteckfunktion weitere kleinere Minima und Maxima
-zu erkennen sind. Des Weiteren sind diese kleineren Minima und Maxima nicht konstant auf einer Höhe, sondern sind an den 
-Maxima der Rechteckfunktion leicht fallend und an den Minima der Rechteckfunktion leicht steigend. 
-\begin{figure}
+zu erkennen sind. Des Weiteren treten diese kleineren Minima und Maxima nicht konstant auf einer Höhe auf, sondern sind 
+in ihrer Höhe an den Maxima der Rechteckfunktion leicht fallend und an den Minima der Rechteckfunktion leicht steigend. 
+\begin{figure} 
   \centering
   \includegraphics{content/MAP002.png}
   \caption{Synthetisierte Rechteckschwingung.}
@@ -83,8 +106,11 @@ Maxima der Rechteckfunktion leicht fallend und an den Minima der Rechteckfunktio
 Bei der Synthese der Sägezahnschwingung werden dieselben Koeffizienten wie bei der Synthese der Rechteckschwingung verwendet, da
 die Koeffizienten beider Schwingungsformen mit dem selben Faktor $\frac{1}{n}$ abfallen. Hier wirken allerdings alle 
 entsprechende Werte aus \autoref{tab:eingestellt} ein. Die synthetisierte Sägezahnfunktion 
-ist in \autoref{fig:synth_saegezahn} zu sehen. Sie zeigt Nebenamplituden verschiedener Größe an der linken Flanke einer Amplitude.
-An der rechten Flanke sind ebenfalls kleinere Ungenauigkeiten auszumachen, welche allerdings in Relation dazu sehr klein ausfallen.
+ist in \autoref{fig:synth_saegezahn} zu sehen. Auch die Sägezahnschwingung ist eindeutig zu erkennen. An der linken Flanke 
+der Amplituden sind deutliche Nebenschwingungen auszumachen, welche teilweise sehr flach ausfallen, aber auch steilere 
+Nebenamplituden auftreten. Die rechte Flanke, ist sehr steil fallend, aber dennoch Ungenauigkeiten in Form von kleineren
+Nebenschwingungen unterworfen.
+
 \begin{figure}
   \centering
   \includegraphics{content/MAP001.png}
@@ -92,9 +118,12 @@ An der rechten Flanke sind ebenfalls kleinere Ungenauigkeiten auszumachen, welch
   \label{fig:synth_saegezahn}
 \end{figure}
 
-Zur Synthese der Dreieckschwingung werden die entsprechenden Amplituden aus \autoref{tab:eingestellt} verwendet.
-Die so synthetisierte Dreieckschwingung ist in \autoref{fig:synth_dreieck} zu sehen. Die Amplituden dieser sind sehr gut auszumachen.
-Lediglich eine Verschiebung in der linken Flanke, sowie eine eher gewölbte rechte Flanke sind hier als Ungenauigkeiten auszumachen.
+Zur Synthese der Dreieckschwingung werden die entsprechenden Amplituden (von Oberwellen ungerader Nummer) aus \autoref{tab:eingestellt} verwendet.
+Die so synthetisierte Dreieckschwingung ist in \autoref{fig:synth_dreieck} zu sehen. Die dargstellte Schwingung ist als 
+Dreieckschwingung auszumachen. An der linken Flanke tritt eine Nebenamplitude auf, welche den Eindruck eines Knicks in der 
+Flanke vermittelt. Die rechte Flanke ist von solchen Ungenauigkeiten nicht betroffen, scheint aber dennoch nicht gerade zu
+verlaufen, sondern einen leicht kurvenförmigen Verlauf zu nehmen.  
+
 \begin{figure}
   \centering
   \includegraphics{content/MAP003.png}

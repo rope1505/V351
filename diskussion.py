@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 import csv
 
-r = -1/ ufloat( -1.2509623101931575, 0.036595737515691854 )
+r = -1/ ufloat( -1.0020193577691352,  0.020762907665498438 )
 s = -1 / ufloat( -0.9664466707707665, 0.02111659357306444 )
-d = -2 / ufloat( -2.7094250830038322, 0.14422294081680928 )
+d = -2 / ufloat( -2.041958747882847,  0.03743878154468241 )
 print("Rechteck ", 1 - r )
 print("Sägezahn ", 1 - s )
 print("Dreieck ", 1 - d )

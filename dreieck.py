@@ -43,12 +43,12 @@ for values in werte:
         i = i+1
 
 #np.savetxt("csv/gravi2.csv", df, delimiter=";")
-xdata = np.linspace(1, 6, 6)
+xdata = [1, 3, 5, 7, 9, 11]
 #print(xdata)
 ydata = np.log(data0)
 #print(ydata)
 plt.xscale("log")
-x_line = np.linspace(1, 6) 
+x_line = np.linspace(1,11) 
 plt.plot(xdata, ydata, 'bx', label="Wertepaare")
 popt1, pcov1 = curve_fit(func, np.log(xdata), ydata ) 
 print(popt1)

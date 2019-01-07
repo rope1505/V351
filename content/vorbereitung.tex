@@ -4,7 +4,7 @@ Zur Vorbereitung auf das Experiment sind die Fourierkoeffizienten von drei Schwi
 und einer Dreieck, zu bestimmen. Dabei ist es von Vorteil die Schwingungen als gerade oder ungerade Funktionen zu definieren, so 
 dass Koeffizienten wegfallen. Die Berechung dieser erfolgt jeweils über Gleichung \eqref{eqn:ak} und Gleichung \eqref{eqn:bk},
 woraus sich dann nach Gleichung \eqref{eqn:fourierreihe} jeweils die zugehörige Fourierreihe berechnet.
-    \subsection{Rechteckschwinung}
+    \subsubsection{Rechteckschwinung}
     Die Rechteckschwingung wird als
     \begin{equation}
     \label{eqn:rechteck}
@@ -14,24 +14,24 @@ woraus sich dann nach Gleichung \eqref{eqn:fourierreihe} jeweils die zugehörige
             \end{cases}
     \end{equation}        
     definiert. Die Fourierkoeffizienten dieser Funktion sind
-    \\
+    \\ \\
     \centerline{$a_n = 0$} 
-    \\
+    \\ 
     und
     \\ 
     \centerline{$b_n = \begin{cases}
                             0 & n \text{ gerade} \\
                             \frac{4}{\pi n } & n \text{ ungerade}
                         \end{cases}$.}
-                        \\
+                        \\ \\
     Die zugehörige Fourierreihe ist daher
     \begin{equation}
     \label{eqn:fourierrechteck}
-    f(t) = \sum_{n=1}^{\infty}  \frac{4}{\pi n } \sin(n \frac{2 \pi}{T} t),
+    f(t) = \sum_{n=1}^{\infty}  \frac{4}{\pi n } \sin \Bigl(n \frac{2 \pi}{T} t \Bigr),
     \end{equation}
     wobei $n$ nur ungerade Werte annimmt.
 
-    \subsection{Sägezahnschwingung}
+    \subsubsection{Sägezahnschwingung}
     Die Funktion, die die Sägezahnschwingung beschreibt lautet:
     \begin{equation}
     \label{eqn:saegezahn}
@@ -41,19 +41,20 @@ woraus sich dann nach Gleichung \eqref{eqn:fourierreihe} jeweils die zugehörige
             \end{cases}.
     \end{equation}
     Die Fourierkoeffizienten dieser Funktion sind
-    \\ 
+    \\ \\
     \centerline{$a_n = \frac{2T}{\pi n} \cos(\pi n)$}
-    \\
+    \\ 
     und 
     \\ 
     \centerline{$b_n = 0$.}
+    \\ \\
     Daher ist die zugehörige Fourierreihe
     \begin{equation}
     \label{eqn:fouriersäge} 
-    f(t) = \sum_{i=1}^{\infty} \frac{2 T}{\pi n} \cos(\frac{ 2 \pi n}{T}t).
+    f(t) = \sum_{i=1}^{\infty} \frac{2 T}{\pi n} \cos \Bigl(\frac{ 2 \pi n}{T}t \Bigr).
     \end{equation}
 
-    \subsection{Dreieckschwingung}
+    \subsubsection{Dreieckschwingung}
     Die Funtktion zur Beschreibung der Dreieckschwingung ist definiert als
     \begin{equation}
     \label{eqn:dreieck}
@@ -64,19 +65,19 @@ woraus sich dann nach Gleichung \eqref{eqn:fourierreihe} jeweils die zugehörige
     \end{equation}
     wobei $A$ die Amplitude der Schwingung ist.
     Die Fourierkoeffizienten zu dieser Funktion sind
-    \\
+    \\ \\
     \centerline{$a_n = \begin{cases}
                         0 & n \text{ gerade} \\
-                        - \frac{8 A}{(\pi n)^2} & n \text{ungerade} \end{cases}$}
-                        \\
+                        - \frac{8 A}{(\pi n)^2} & n \text{ ungerade} \end{cases}$}
+                       \\
     und   
-    \\         
-    \centerline{$b_n = 0$.} 
     \\      
+    \centerline{$b_n = 0$.} 
+    \\ \\      
     Die dazugehörige Fourierreihe ist daher
     \begin{equation}
     \label{eqn:fourierdrei}
-    f(t) = \sum_{i=1}^{\infty} - \frac{8 A}{(\pi n)^2} \cos(\frac{2 \pi n}{T}t),    
+    f(t) = \sum_{i=1}^{\infty} - \frac{8 A}{(\pi n)^2} \cos \Bigl(\frac{2 \pi n}{T}t \Bigr),    
     \end{equation}
     wobei $n$ nur ungerade Werte annimmt.
  
