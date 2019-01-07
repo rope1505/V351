@@ -16,21 +16,21 @@ Dabei ist die Fourierreihe mit
 
 \begin{equation}
 \label{eqn:fourierreihe}
-    \frac{a_0}{2} + \sum_{k=1}^\infty \bigg( a_k \cdot \cos \bigg( \frac{2 n \pi}{T} t \bigg) + b_k \sin \bigg( \frac{2 n \pi}{T} t \bigg) \bigg).
+    \frac{a_0}{2} + \sum_{k=1}^\infty \bigg( a_k \cdot \cos \bigg( \frac{2 k \pi}{T} t \bigg) + b_k \sin \bigg( \frac{2 k \pi}{T} t \bigg) \bigg).
 \end{equation}
 
 definiert. Diese Reihe ist gleichmäßig konvergent, wenn $f(t)$ eine periodische Funktion mit der Periodendauer $T$ ist. Dann gilt für die Koeffizienten
 
 \begin{equation}
 \label{eqn:ak}
-    a_k = \frac{2}{T} \int_0^T f(t) \cos \bigg( \frac{2 n \pi}{T} t \bigg) \symup{d}t
+    a_k = \frac{2}{T} \int_0^T f(t) \cos \bigg( \frac{2 k \pi}{T} t \bigg) \symup{d}t
 \end{equation}
 
 und
 
 \begin{equation}
 \label{eqn:bk}
-    a_k = \frac{2}{T} \int_0^T f(t) \sin \bigg( \frac{2 n \pi}{T} t \bigg) \symup{d}t
+    a_k = \frac{2}{T} \int_0^T f(t) \sin \bigg( \frac{2 k \pi}{T} t \bigg) \symup{d}t
 \end{equation}
 
 mit $k \in \mathds{N}$.
@@ -38,7 +38,7 @@ mit $k \in \mathds{N}$.
 Aus der Definition der Fourierreihe lassen sich ganzzahlige Vielfache einer Grundfrequenz $\nu_1$ erkennen. Diese sind die Frequenzen zu den jeweiligen Oberschwingungen.
 Des Weiteren gibt es in \eqref{eqn:fourierreihe} nur Phasenverschiebungen von $0$, $\frac{\pi}{2}$, $\pi$ und $\frac{3 \pi}{2}$.
 Werden die Amplituden $a_k$ beziehungsweise $b_k$ von einer periodischen Funktion gegen die zugehörigen Frequenzen aufgetragen ergibt sich ein Linienspektrum, während eine nicht periodische Funktion ein kontinuierliches Spektrum liefert.
-Eine Fourieranalyse lässt sich auch mit nicht stetigen periodischen Funktionen durchführen. Dabei entsteht im Graphen der Fourierreihe an den Unstetigkeitsstellen eine Überschwingungung. Diese wird als Gibb'sches Phänomen bezeichnet. Die Größe bleibt selbst bei $n \rightarrow \infty$ konstant, jedoch wird die Breite des Überschwingens geringer.
+Eine Fourieranalyse lässt sich auch mit nicht stetigen periodischen Funktionen durchführen. Dabei entsteht im Graphen der Fourierreihe an den Unstetigkeitsstellen eine Überschwingungung. Diese wird als Gibb'sches Phänomen bezeichnet. Die Größe bleibt selbst bei $k \rightarrow \infty$ konstant, jedoch wird die Breite des Überschwingens geringer.
 
 Die Fouriertransformation liefert dabei das Linienspektrum. Es gilt dabei
 
